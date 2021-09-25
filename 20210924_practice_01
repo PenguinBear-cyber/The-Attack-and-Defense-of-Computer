@@ -1,5 +1,6 @@
-'''
+# Linux C 程式的編譯與運行 
 
+'''
 > readelf -h /bin/ls
 
 ELF Header:
