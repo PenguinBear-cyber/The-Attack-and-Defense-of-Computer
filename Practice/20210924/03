@@ -1,6 +1,11 @@
 #3 組語程式格式:[AT&T Syntax] VS [Intel Syntax]
 
 '''
+> gcc -S -masm=intel test.c -o test_intel_1.s
+
+'''
+
+'''
 > cat test_intel_1.s
 	
   .file	"test.c"
