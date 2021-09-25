@@ -161,3 +161,128 @@ Disassembly of section .fini:
     11bc:	c3                   	ret
     
 '''
+
+'''
+> objdump -S -j .text -M intel test --no-show-raw-insn
+
+test:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000000001050 <_start>:
+    1050:	xor    ebp,ebp
+    1052:	mov    r9,rdx
+    1055:	pop    rsi
+    1056:	mov    rdx,rsp
+    1059:	and    rsp,0xfffffffffffffff0
+    105d:	push   rax
+    105e:	push   rsp
+    105f:	lea    r8,[rip+0x14a]        # 11b0 <__libc_csu_fini>
+    1066:	lea    rcx,[rip+0xe3]        # 1150 <__libc_csu_init>
+    106d:	lea    rdi,[rip+0xc1]        # 1135 <main>
+    1074:	call   QWORD PTR [rip+0x2f66]        # 3fe0 <__libc_start_main@GLIBC_2.2.5>
+    107a:	hlt    
+    107b:	nop    DWORD PTR [rax+rax*1+0x0]
+
+0000000000001080 <deregister_tm_clones>:
+    1080:	lea    rdi,[rip+0x2fa9]        # 4030 <__TMC_END__>
+    1087:	lea    rax,[rip+0x2fa2]        # 4030 <__TMC_END__>
+    108e:	cmp    rax,rdi
+    1091:	je     10a8 <deregister_tm_clones+0x28>
+    1093:	mov    rax,QWORD PTR [rip+0x2f3e]        # 3fd8 <_ITM_deregisterTMCloneTable>
+    109a:	test   rax,rax
+    109d:	je     10a8 <deregister_tm_clones+0x28>
+    109f:	jmp    rax
+    10a1:	nop    DWORD PTR [rax+0x0]
+    10a8:	ret    
+    10a9:	nop    DWORD PTR [rax+0x0]
+
+00000000000010b0 <register_tm_clones>:
+    10b0:	lea    rdi,[rip+0x2f79]        # 4030 <__TMC_END__>
+    10b7:	lea    rsi,[rip+0x2f72]        # 4030 <__TMC_END__>
+    10be:	sub    rsi,rdi
+    10c1:	sar    rsi,0x3
+    10c5:	mov    rax,rsi
+    10c8:	shr    rax,0x3f
+    10cc:	add    rsi,rax
+    10cf:	sar    rsi,1
+    10d2:	je     10e8 <register_tm_clones+0x38>
+    10d4:	mov    rax,QWORD PTR [rip+0x2f15]        # 3ff0 <_ITM_registerTMCloneTable>
+    10db:	test   rax,rax
+    10de:	je     10e8 <register_tm_clones+0x38>
+    10e0:	jmp    rax
+    10e2:	nop    WORD PTR [rax+rax*1+0x0]
+    10e8:	ret    
+    10e9:	nop    DWORD PTR [rax+0x0]
+
+00000000000010f0 <__do_global_dtors_aux>:
+    10f0:	cmp    BYTE PTR [rip+0x2f39],0x0        # 4030 <__TMC_END__>
+    10f7:	jne    1128 <__do_global_dtors_aux+0x38>
+    10f9:	push   rbp
+    10fa:	cmp    QWORD PTR [rip+0x2ef6],0x0        # 3ff8 <__cxa_finalize@GLIBC_2.2.5>
+    1102:	mov    rbp,rsp
+    1105:	je     1113 <__do_global_dtors_aux+0x23>
+    1107:	mov    rdi,QWORD PTR [rip+0x2f1a]        # 4028 <__dso_handle>
+    110e:	call   1040 <__cxa_finalize@plt>
+    1113:	call   1080 <deregister_tm_clones>
+    1118:	mov    BYTE PTR [rip+0x2f11],0x1        # 4030 <__TMC_END__>
+    111f:	pop    rbp
+    1120:	ret    
+    1121:	nop    DWORD PTR [rax+0x0]
+    1128:	ret    
+    1129:	nop    DWORD PTR [rax+0x0]
+
+0000000000001130 <frame_dummy>:
+    1130:	jmp    10b0 <register_tm_clones>
+
+0000000000001135 <main>:
+    1135:	push   rbp
+    1136:	mov    rbp,rsp
+    1139:	lea    rdi,[rip+0xec4]        # 2004 <_IO_stdin_used+0x4>
+    1140:	call   1030 <puts@plt>
+    1145:	mov    eax,0x0
+    114a:	pop    rbp
+    114b:	ret    
+    114c:	nop    DWORD PTR [rax+0x0]
+
+0000000000001150 <__libc_csu_init>:
+    1150:	push   r15
+    1152:	mov    r15,rdx
+    1155:	push   r14
+    1157:	mov    r14,rsi
+    115a:	push   r13
+    115c:	mov    r13d,edi
+    115f:	push   r12
+    1161:	lea    r12,[rip+0x2c80]        # 3de8 <__frame_dummy_init_array_entry>
+    1168:	push   rbp
+    1169:	lea    rbp,[rip+0x2c80]        # 3df0 <__init_array_end>
+    1170:	push   rbx
+    1171:	sub    rbp,r12
+    1174:	sub    rsp,0x8
+    1178:	call   1000 <_init>
+    117d:	sar    rbp,0x3
+    1181:	je     119e <__libc_csu_init+0x4e>
+    1183:	xor    ebx,ebx
+    1185:	nop    DWORD PTR [rax]
+    1188:	mov    rdx,r15
+    118b:	mov    rsi,r14
+    118e:	mov    edi,r13d
+    1191:	call   QWORD PTR [r12+rbx*8]
+    1195:	add    rbx,0x1
+    1199:	cmp    rbp,rbx
+    119c:	jne    1188 <__libc_csu_init+0x38>
+    119e:	add    rsp,0x8
+    11a2:	pop    rbx
+    11a3:	pop    rbp
+    11a4:	pop    r12
+    11a6:	pop    r13
+    11a8:	pop    r14
+    11aa:	pop    r15
+    11ac:	ret    
+    11ad:	nop    DWORD PTR [rax]
+
+00000000000011b0 <__libc_csu_fini>:
+    11b0:	ret 
+    
+'''
