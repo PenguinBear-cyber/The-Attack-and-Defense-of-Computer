@@ -17,7 +17,7 @@ nasm負責彙編檔案，因此可以使用這個指令:
 ### 第一部分:32位元Linux系統呼叫
 
 首先，先編輯一份32位元的檔案
-`gedit helloworld32.asm'
+`gedit helloworld32.asm`
 
 編輯完成後，接著執行下面指令來彙編檔案
 ```
@@ -40,9 +40,7 @@ Error表示輸入檔為ELF32格式，但目前系統為64位元的，而ld預設
 ```
 即會輸出編輯檔案中撰寫的輸出`Hello World!`
 
-
-
-hexdump命令一般用來檢視"二進位制"檔案的十六進位制編碼，在程式輸出二進位制格式的檔案時，常用hexdump來檢查輸出是否正確。
+接著，hexdump命令一般用來檢視"二進位制"檔案的十六進位制編碼，在程式輸出二進位制格式的檔案時，常用hexdump來檢查輸出是否正確。
 
 因此，用hexdump來看看。
 ```
@@ -96,6 +94,21 @@ Output:
 ---
 
 ### 第二部分:64位元Linux系統呼叫
+
+步驟同上述32位元系統呼叫。
+
+首先，先編輯一份64位元的檔案
+`gedit helloworld64.asm`
+
+編輯完成後，接著執行下面指令來彙編檔案
+```
+> nasm -f elf64 helloworld64.asm
+> ld helloworld64.o -o helloworld64
+> ./helloworld64
+```
+即會輸出編輯檔案中撰寫的輸出`Hello, World!`
+
+接著，用hexdump來看看。
 ```
 > hd helloworld64.o
 ```
@@ -158,7 +171,24 @@ Output:
 00000380
 ```
 ---
-### binary簡單分析
+### 第三部分:64-bit作業系統開發32-bit與64-bit的執行檔
+
+首先，先編輯一份檔案
+`gedit helloworld.asm`
+編輯完成後，接著執行下面指令來彙編檔案
+```
+nasm -f elf64 helloworld.asm
+ld helloworld.o -o helloworld
+./helloworld
+```
+即會輸出編輯檔案中撰寫的輸出`hello World!`
+
+接下來，做binary簡單分析。
+```
+> file helloworld
+> strings helloworld
+```
+同理，編譯成32位元，下面hexdump看看。
 ```
 > hexdump helloworld2
 ```
