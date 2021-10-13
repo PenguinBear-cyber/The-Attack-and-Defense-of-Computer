@@ -7,6 +7,14 @@ nasm負責彙編檔案，因此可以使用這個指令:
 
 `nasm -f file.asm -o file.o`
 
+首先，在kali上先安裝nasm
+```
+> apt-get install nasm
+```
+安裝完成!
+
+### 第一部分:32位元Linux系統呼叫
+
 解決錯誤!!
 ```
 > ld -m elf_i386 -o helloworld32 helloworld32.o
