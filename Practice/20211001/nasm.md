@@ -1,8 +1,11 @@
 # nasm
 
-nasm負責彙編檔案，因此可以使用這個命令:
+nasm負責彙編檔案，因此可以使用這個指令:
 `nasm -f <format> <filename> [-o <output>]`
-例如:想將檔案'file.asm'彙編成'ELF'格式的檔案'file.o'
+
+例如:想將檔案'file.asm'彙編成'ELF'格式的檔案'file.o'。
+
+`nasm -f file.asm -o file.o`
 
 解決錯誤!!
 ```
