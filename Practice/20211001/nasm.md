@@ -13,12 +13,33 @@ nasm負責彙編檔案，因此可以使用這個指令:
 ```
 安裝完成!
 
+
 ### 第一部分:32位元Linux系統呼叫
 
-解決錯誤!!
+首先，先編輯一份32位元的檔案
+`gedit helloworld32.asm'
+
+編輯完成後，接著執行下面指令來彙編檔案
+```
+> nasm -f elf32 helloworld32.asm
+> ld helloworld32.o -o helloworld32
+```
+Output出現Error@@
+```
+ld: i386 architecture of input file `helloworld32.o' is incompatible with i386:x86-64 output
+```
+Error表示輸入檔為ELF32格式，但目前系統為64位元的，而ld預設生成的檔案格式elf64-x86-64，因此會出現這樣的錯誤提示。
+
+由於ld不支援elf32，改用下面指令來解決錯誤，使用-m elf_i386可以模擬32位元平臺上ld的指令。
 ```
 > ld -m elf_i386 -o helloworld32 helloworld32.o
 ```
+解決錯誤!系統執行恢復正常!!
+```
+> ./helloworld32
+```
+即會輸出編輯檔案中撰寫的輸出`Hello World!`
+
 ```
 > hd helloworld32.o
 ```
