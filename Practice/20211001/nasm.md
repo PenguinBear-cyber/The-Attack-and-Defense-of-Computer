@@ -1,5 +1,9 @@
 # nasm
 
+```
+nasm負責彙編檔案，因此可以使用這個命令*nasm -f <format> <filename> [-o <output>]
+```
+
 解決錯誤!!
 ```
 > ld -m elf_i386 -o helloworld32 helloworld32.o
