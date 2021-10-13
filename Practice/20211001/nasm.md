@@ -100,7 +100,7 @@ Output:
 首先，先編輯一份64位元的檔案
 `gedit helloworld64.asm`
 
-編輯完成後，接著執行下面指令來彙編檔案
+編輯完成後，接著執行下面指令來彙編檔案。
 ```
 > nasm -f elf64 helloworld64.asm
 > ld helloworld64.o -o helloworld64
@@ -174,8 +174,8 @@ Output:
 ### 第三部分:64-bit作業系統開發32-bit與64-bit的執行檔
 
 首先，先編輯一份檔案
-`gedit helloworld.asm`
-編輯完成後，接著執行下面指令來彙編檔案
+`gedit helloworld.asm`，
+編輯完成後，接著執行下面指令來彙編檔案。
 ```
 nasm -f elf64 helloworld.asm
 ld helloworld.o -o helloworld
