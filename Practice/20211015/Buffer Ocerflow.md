@@ -4,4 +4,4 @@
 
 一般來說，正常使用的情況下，輸入的值(input data)會小於緩衝區的大小(buffer size)，如下圖:![image](https://github.com/PenguinBear-cyber/The-Attack-and-Defense-of-Computer/blob/main/Practice/20211015/normal%20mode%20of%20%20input.jpg)
 
-但若程式設計者在設計讀取輸入值至緩衝區時，忽略了要檢查輸入值長度，攻擊者就可以透過這樣的疏失進行攻擊，可以對此程式輸入一筆較長的資料(超過緩衝區乘載的資料量)來造成程式癱瘓或改變執行流程，如下圖:![image]()
+但若程式設計者在設計讀取輸入值至緩衝區時，忽略了要檢查輸入值長度，攻擊者就可以透過這樣的疏失進行攻擊，可以對此程式輸入一筆較長的資料(超過緩衝區乘載的資料量)來造成程式癱瘓或改變執行流程，如下圖:![image](https://github.com/PenguinBear-cyber/The-Attack-and-Defense-of-Computer/blob/main/Practice/20211015/buffer%20overflow_pic.jpg)
