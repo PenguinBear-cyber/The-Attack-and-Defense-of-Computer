@@ -55,4 +55,4 @@ FLAG{xtnntfhzflpttvxvzzbfjfnxbjvrzxdfvzlvhpt}
 
 MyFirstCTF{L0c41_vARiaBl3_0n_Th3_sT4cK?!}
 
-<END>
+[END]
