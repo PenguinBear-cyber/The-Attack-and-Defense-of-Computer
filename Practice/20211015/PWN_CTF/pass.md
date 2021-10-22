@@ -47,4 +47,8 @@ Radare2(又稱r2)是一個用於逆向工程和分析二進製文件的完整框
 
 > python3 exploit.py
 
-![image]()
+![image](https://github.com/PenguinBear-cyber/The-Attack-and-Defense-of-Computer/blob/main/Practice/20211015/PWN_CTF/image/pass_final.png)
+
+這裡可以看到 flag 了!!
+FLAG{xtnntfhzflpttvxvzzbfjfnxbjvrzxdfvzlvhpt}
+MyFirstCTF{L0c41_vARiaBl3_0n_Th3_sT4cK?!}
