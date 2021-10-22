@@ -54,3 +54,5 @@ Radare2(又稱r2)是一個用於逆向工程和分析二進製文件的完整框
 FLAG{xtnntfhzflpttvxvzzbfjfnxbjvrzxdfvzlvhpt}
 
 MyFirstCTF{L0c41_vARiaBl3_0n_Th3_sT4cK?!}
+
+<END>
