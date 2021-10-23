@@ -47,3 +47,8 @@ Radare2(又稱r2)是一個用於逆向工程和分析二進製文件的完整框
 
 ![image](https://github.com/PenguinBear-cyber/The-Attack-and-Defense-of-Computer/blob/main/Practice/20211015/PWN_CTF/image/gohome_final.png)
 
+這裡可以看到 flag 了!!
+
+MyFirstCTF{r3tURn_t0_3h3rev3R_U_w4nT_tO_g0_XD}
+
+[END]
