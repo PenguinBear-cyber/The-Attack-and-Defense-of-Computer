@@ -32,3 +32,8 @@ Radare2(又稱r2)是一個用於逆向工程和分析二進製文件的完整框
 * VV:用來顯示畫面，使用 p 可以切換不同表現方式。
 
 ![image](https://github.com/PenguinBear-cyber/The-Attack-and-Defense-of-Computer/blob/main/Practice/20211015/PWN_CTF/image/gohome_VV.png)
+
+下圖為程式執行的流程圖:
+
+![image]()
+
