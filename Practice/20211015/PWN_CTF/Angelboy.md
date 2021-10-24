@@ -45,5 +45,5 @@ Radare2(又稱r2)是一個用於逆向工程和分析二進製文件的完整框
 * s main:定位到 main 的記憶體位置。這裡的位置是 0x400636。
 * VV:用來顯示畫面，使用 p 可以切換不同表現方式。
 
-![image]()
+![image](https://github.com/PenguinBear-cyber/The-Attack-and-Defense-of-Computer/blob/main/Practice/20211015/PWN_CTF/image/Angelboy_VV.png)
 
