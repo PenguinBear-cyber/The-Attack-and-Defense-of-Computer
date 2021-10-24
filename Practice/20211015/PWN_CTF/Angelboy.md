@@ -17,3 +17,13 @@
 
 由上圖可看見執行此檔案後的結果，需要我們輸入兩個變數。
 
+再下下列指令來檢查檔案格式。
+> file ret2sc
+
+Output:
+```
+ret2sc: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, for GNU/Linux 2.6.32, BuildID[sha1]=b83f13f0a84fdae7a5bc54d828d0e4ea15575d6d, not stripped
+```
+由結果可見，此檔案為 ELF 64位元格式。
+
+接下來，可以開始對檔案進行逆向分析，首先使用逆向工程的靜態分析工具-radare2。
