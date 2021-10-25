@@ -55,3 +55,8 @@ Radare2(又稱r2)是一個用於逆向工程和分析二進製文件的完整框
 
 ![image](https://github.com/PenguinBear-cyber/The-Attack-and-Defense-of-Computer/blob/main/Practice/20211015/PWN_CTF/image/Angelboy_gdb.png)
 
+接著使用下面指令來找到 main 記憶體位址的斷點。
+> b main
+
+![image]()
+
