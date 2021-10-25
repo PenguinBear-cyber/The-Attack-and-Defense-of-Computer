@@ -53,5 +53,5 @@ Radare2(又稱r2)是一個用於逆向工程和分析二進製文件的完整框
 
 觀察完畢程式執行的靜態流程圖後，可以使用動態分析 **gdb-peda** 來進行分析，使用 gdb 啟動程式(gdb + 執行檔)。
 
-![image]()
+![image](https://github.com/PenguinBear-cyber/The-Attack-and-Defense-of-Computer/blob/main/Practice/20211015/PWN_CTF/image/Angelboy_gdb.png)
 
