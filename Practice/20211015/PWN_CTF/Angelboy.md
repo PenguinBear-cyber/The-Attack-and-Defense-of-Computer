@@ -58,5 +58,13 @@ Radare2(又稱r2)是一個用於逆向工程和分析二進製文件的完整框
 接著使用下面指令來找到 main 記憶體位址的斷點。
 > b main
 
+![image](https://github.com/PenguinBear-cyber/The-Attack-and-Defense-of-Computer/blob/main/Practice/20211015/PWN_CTF/image/Angelboy_b.png)
+
+找到後，可以 run 起來。呈現下圖:
+
+![image]()
+
+使用 vmmap 找到具有 rwx 權限 ==> 0x00601000 到0x00602000 是可以寫入。
+
 ![image]()
 
