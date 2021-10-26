@@ -68,3 +68,11 @@ Radare2(又稱r2)是一個用於逆向工程和分析二進製文件的完整框
 
 ![image](https://github.com/PenguinBear-cyber/The-Attack-and-Defense-of-Computer/blob/main/Practice/20211015/PWN_CTF/image/Angelboy_vmmap.png)
 
+接下來可以創建 shellcode，下面為其檔案的程式內容。
+
+![image]()
+
+執行檔案看看。
+
+![image]()
+
