@@ -76,11 +76,11 @@ Radare2(又稱r2)是一個用於逆向工程和分析二進製文件的完整框
 
 ![image](https://github.com/PenguinBear-cyber/The-Attack-and-Defense-of-Computer/blob/main/Practice/20211015/PWN_CTF/image/Angelboy_sc3.png)
 
-最後，創建 exploit.py 檔來進行攻擊。
+最後，創建 exploit.py 檔，下圖為其檔案內容。
 
-![image]()
+![image](https://github.com/PenguinBear-cyber/The-Attack-and-Defense-of-Computer/blob/main/Practice/20211015/PWN_CTF/image/Angelboy_exploit.png)
 
-可以看見裡面有一個 flag.txt 檔
+下 python3 exploit.py 的指令，會連接到題目給的檔案並進行攻擊，則可以看見裡面有一個 flag.txt 檔。
 
 ![image]()
 
