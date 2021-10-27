@@ -17,7 +17,7 @@ Ghidra 有以下特點及功能:
 
 首先，我們可以執行看看 adder 檔案，中間可能會遇到 **Permission Denied**，記得先 *_chmod +x adder_* 變更權限。許可完執行權限後，可以看到 adder 要求我們輸入三個數字。
 
-![image]()
+![image](https://github.com/PenguinBear-cyber/The-Attack-and-Defense-of-Computer/blob/main/Practice/LAB2/image/adder_run.jpg)
  
  輸入完成後，其回傳一個 nope 給我們。這樣我們可以開始對檔案進行分析，先打開 Ghidra 並創建一個 project 將 adder 檔案匯入，
 
