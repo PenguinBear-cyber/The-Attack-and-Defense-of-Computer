@@ -33,7 +33,7 @@ Ghidra 有以下特點及功能:
 
 最右側會有反編譯的結果程式，如圖:
 
-![image]()
+![image](https://github.com/PenguinBear-cyber/The-Attack-and-Defense-of-Computer/blob/main/Practice/LAB2/image/adder_maincode.jpg)
 
 我們看到底色黃色的部分得知，三個 integer 相加起來等於 **0x539** 即可能找出我們想要的 flag 了。
 
