@@ -43,4 +43,4 @@ Ghidra 有以下特點及功能:
 
 我們知道 **0x539** 等於數字 **1337**，最後就可以再執行一次 adder 檔案，輸入三個數總和為 1337，即找到我們想要的 flag 了。
 
-![image]()
+![image](https://github.com/PenguinBear-cyber/The-Attack-and-Defense-of-Computer/blob/main/Practice/LAB2/image/adder_final.jpg)
