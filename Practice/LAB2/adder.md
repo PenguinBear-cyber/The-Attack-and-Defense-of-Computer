@@ -25,6 +25,6 @@ Ghidra 有以下特點及功能:
 
 匯入完成後，它會先問是否想將檔案進行分析，選擇 yes。
 
-![image]()
+![image](https://github.com/PenguinBear-cyber/The-Attack-and-Defense-of-Computer/blob/main/Practice/LAB2/image/adder_analyze.jpg)
 
 等待工具分析完成後，就可以透過其代碼瀏覽器進行觀察，
