@@ -21,7 +21,7 @@ Ghidra 有以下特點及功能:
  
  輸入完成後，其回傳一個 nope 給我們。這樣我們可以開始對檔案進行分析，先打開 Ghidra 並創建一個 project 將 adder 檔案匯入，
 
-![image]()
+![image](https://github.com/PenguinBear-cyber/The-Attack-and-Defense-of-Computer/blob/main/Practice/LAB2/image/adder_import.jpg)
 
 匯入完成後，它會先問是否想將檔案進行分析，選擇 yes。
 
