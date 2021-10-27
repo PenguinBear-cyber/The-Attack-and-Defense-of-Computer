@@ -39,7 +39,7 @@ Ghidra 有以下特點及功能:
 
 因此，下一步就要解開 **0x539** 等於數字多少，我們使用 python 來幫我們計算即可以得到結果，如下圖。
 
-![image]()
+![image](https://github.com/PenguinBear-cyber/The-Attack-and-Defense-of-Computer/blob/main/Practice/LAB2/image/adder_python.jpg)
 
 我們知道 **0x539** 等於數字 **1337**，最後就可以再執行一次 adder 檔案，輸入三個數總和為 1337，即找到我們想要的 flag 了。
 
