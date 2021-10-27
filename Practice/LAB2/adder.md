@@ -29,7 +29,7 @@ Ghidra 有以下特點及功能:
 
 等待工具分析完成後，就可以透過其代碼瀏覽器進行觀察，從中發現，在左側 symbol tree 中可見 main function，雙擊後會呈現下圖，
 
-![image]()
+![image](https://github.com/PenguinBear-cyber/The-Attack-and-Defense-of-Computer/blob/main/Practice/LAB2/image/adder_main.jpg)
 
 最右側會有反編譯的結果程式，如圖:
 
