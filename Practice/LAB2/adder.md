@@ -27,4 +27,20 @@ Ghidra 有以下特點及功能:
 
 ![image](https://github.com/PenguinBear-cyber/The-Attack-and-Defense-of-Computer/blob/main/Practice/LAB2/image/adder_analyze.jpg)
 
-等待工具分析完成後，就可以透過其代碼瀏覽器進行觀察，
+等待工具分析完成後，就可以透過其代碼瀏覽器進行觀察，從中發現，在左側 symbol tree 中可見 main function，雙擊後會呈現下圖，
+
+![image]()
+
+最右側會有反編譯的結果程式，如圖:
+
+![image]()
+
+我們看到底色黃色的部分得知，三個 integer 相加起來等於 **0x539** 即可能找出我們想要的 flag 了。
+
+因此，下一步就要解開 **0x539** 等於數字多少，我們使用 python 來幫我們計算即可以得到結果，如下圖。
+
+![image]()
+
+我們知道 **0x539** 等於數字 **1337**，最後就可以再執行一次 adder 檔案，輸入三個數總和為 1337，即找到我們想要的 flag 了。
+
+![image]()
