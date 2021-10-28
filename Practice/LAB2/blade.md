@@ -12,3 +12,7 @@
 
 ![image](https://github.com/PenguinBear-cyber/The-Attack-and-Defense-of-Computer/blob/main/Practice/LAB2/image/blade_show.jpg)
 
+接下來我們可以開始使用 ghidra 工具進行程式的觀察及分析，這裡發現在 symbol tree 底下的 main function 有玄機，如圖。
+
+![image]()
+
