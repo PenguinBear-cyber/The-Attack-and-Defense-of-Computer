@@ -37,4 +37,8 @@ strcmp() 是一個C語言的函式庫。
 
 ![image](https://github.com/PenguinBear-cyber/The-Attack-and-Defense-of-Computer/blob/main/Practice/LAB2/image/blade_final.jpg)
 
+這裡可以看到 flag 了!!
 
+inctfj{all_these_moments_lost_in_time}
+
+[END]
