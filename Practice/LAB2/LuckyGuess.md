@@ -54,7 +54,7 @@
 
 ![image](https://github.com/PenguinBear-cyber/The-Attack-and-Defense-of-Computer/blob/main/Practice/LAB2/image/LuckyGuess_final.jpg)
 
-
+這裡可以看到 flag 了!!
 
 easyctf{aaA_tOucH_0f_luccK_47ca4e}
 
