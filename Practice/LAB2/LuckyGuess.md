@@ -25,3 +25,10 @@
 ![image](https://github.com/PenguinBear-cyber/The-Attack-and-Defense-of-Computer/blob/main/Practice/LAB2/image/LuckyGuess_maincode.jpg)
 
 呈上圖，底色綠色的地方說明若 **if ( local_a8 == local_9c ) 則 **break**，此表示若滿足 if 條件就會跳出 while 迴圈，進入 for 迴圈得到 flag，亦表示執行成功。
+
+為滿足上述條件，下一階段我們接著使用一個逆向工程的動態分析工具 - **gdb-peda**，可以追蹤每⼀行組語，也可在中途改變流程。
+
+所以接著就進入 gdb 工具開起 LuckyGuess 檔案，如圖。
+
+![image]()
+
