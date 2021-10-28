@@ -27,8 +27,6 @@ strcmp() 是一個C語言的函式庫，其用法為 int strcmp(const char *str1
 返回值為:
 
 1. 如果 str1 小於 str2，則返回值 < 0
-
 2. 如果 str2 小於 str1，則返回值 > 0
-
 3. 如果 str1 等於 str2，則返回值 = 0
 ```
