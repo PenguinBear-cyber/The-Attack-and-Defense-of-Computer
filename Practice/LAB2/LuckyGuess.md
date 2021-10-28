@@ -4,7 +4,7 @@
 
 首先，先執行看看 LuckyGuess 這個檔案，如圖。
 
-![image]()
+![image](https://github.com/PenguinBear-cyber/The-Attack-and-Defense-of-Computer/blob/main/Practice/LAB2/image/LuckyGuess_run.jpg)
 
 由圖可知，此程式要我們猜數字，目前我們所能做的事就是盲猜，最後會顯示 **no dice.** 而結束程式。
 
