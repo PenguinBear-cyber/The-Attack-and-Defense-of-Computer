@@ -46,7 +46,7 @@
 
 則可以下 **r** 指令執行檔案，執行到上圖斷點位置就會停止，下圖為程式執行過程呈現。
 
-![image]()
+![image](https://github.com/PenguinBear-cyber/The-Attack-and-Defense-of-Computer/blob/main/Practice/LAB2/image/LuckyGuess_r1.jpg)
 
 ![image]()
 
