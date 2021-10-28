@@ -30,5 +30,5 @@
 
 所以接著就進入 gdb 工具開起 LuckyGuess 檔案，如圖。
 
-![image]()
+![image](https://github.com/PenguinBear-cyber/The-Attack-and-Defense-of-Computer/blob/main/Practice/LAB2/image/LuckyGuess_gdb.jpg)
 
