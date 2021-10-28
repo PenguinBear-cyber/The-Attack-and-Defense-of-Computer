@@ -18,5 +18,5 @@
 
 我們看到在最右邊的反編譯畫面中，可以知道程式的運作情形，
 
-![image]()
+![image](https://github.com/PenguinBear-cyber/The-Attack-and-Defense-of-Computer/blob/main/Practice/LAB2/image/blade_maincode.jpg)
 
