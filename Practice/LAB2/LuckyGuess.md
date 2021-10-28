@@ -24,7 +24,7 @@
 
 ![image](https://github.com/PenguinBear-cyber/The-Attack-and-Defense-of-Computer/blob/main/Practice/LAB2/image/LuckyGuess_maincode.jpg)
 
-呈上圖，底色綠色的地方說明若 **if ( local_a8 == local_9c ) 則 **break**，此表示若滿足 if 條件就會跳出 while 迴圈，進入 for 迴圈得到 flag，亦表示執行成功。
+呈上圖，底色綠色的地方說明若 **if ( local_a8 == local_9c )** 則 **break**，此表示若滿足 if 條件就會跳出 while 迴圈，進入 for 迴圈得到 flag，亦表示執行成功。
 
 為滿足上述條件，下一階段我們接著使用一個逆向工程的動態分析工具 - **gdb-peda**，可以追蹤每⼀行組語，也可在中途改變流程。
 
@@ -32,3 +32,10 @@
 
 ![image](https://github.com/PenguinBear-cyber/The-Attack-and-Defense-of-Computer/blob/main/Practice/LAB2/image/LuckyGuess_gdb.jpg)
 
+ 下一步反組譯 main function，觀察裡面的執行過程，如圖。
+ 
+ ![image]()
+ 
+ 從中我們找到 main 中有 jnz 指令，因此最簡單的方式就是將 jnz 指令修改為 nop 指令，表示不做任何有效操作的命令。
+ 
+ 
