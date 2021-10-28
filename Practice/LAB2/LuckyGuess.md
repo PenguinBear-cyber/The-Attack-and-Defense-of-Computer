@@ -38,4 +38,9 @@
  
  從中我們找到 main 中有 jnz 指令，如下圖，因此最簡單的方式就是將 jnz 指令修改為 nop 指令，表示不做任何有效操作的命令。
  
- ![image]()
+ ![image](https://github.com/PenguinBear-cyber/The-Attack-and-Defense-of-Computer/blob/main/Practice/LAB2/image/LuckyGuess_jnz.jpg)
+
+先在此記憶體位置設置斷點。
+
+![image]()
+
