@@ -10,7 +10,7 @@
 
 因此，我們可以開始分析程式，這裡使用到一個逆向工程的工具 - **Ghidra**，創建一個新的 project 再將 LuckyGuess 檔案匯入，匯入完成後會出現下圖提示，詢問是否要分析檔案。
 
-![image]()
+![image](https://github.com/PenguinBear-cyber/The-Attack-and-Defense-of-Computer/blob/main/Practice/LAB2/image/LuckyGuess_analyze.jpg)
 
 按下 yes 後，會呈現下圖。
 
