@@ -22,10 +22,11 @@
 
 呈上圖，底色綠色的地方說明若 **if (iVar1 == 0)** 則會進入 **print_flag()** 中，這裡非常有可能是我們想要找的地方。另外，更直接且明確的提示為上述的上一行程式， **iVar1 = strcmp(local_64,"to_say_something");** ，這裡有一個對 **strcmp** 函數的調用。
 ```
-strcmp() 是一個C語言的函式庫，其用法為 int strcmp(const char *str1, const char *str2)，函數 srtcmp 將兩個字符串作為參數，並根據字符串的比較返回一個整數值。
+strcmp() 是一個C語言的函式庫。
+其用法為 int strcmp(const char *str1, const char *str2)
+函數 srtcmp 將兩個字符串作為參數，並根據字符串的比較返回一個整數值。
 
 返回值為:
-
 1. 如果 str1 小於 str2，則返回值 < 0
 2. 如果 str2 小於 str1，則返回值 > 0
 3. 如果 str1 等於 str2，則返回值 = 0
