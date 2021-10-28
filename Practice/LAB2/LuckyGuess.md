@@ -50,7 +50,7 @@
 
 ![image](https://github.com/PenguinBear-cyber/The-Attack-and-Defense-of-Computer/blob/main/Practice/LAB2/image/LuckyGuess_r2.jpg)
 
-最後，重新設置 **0x400b93** 位置，然後繼續執行到斷點，即可以看到我們尋找的 flag。
+最後，重新設置 **0x400b93** 位置，然後繼續執行，即可以看到我們尋找的 flag。
 
 ![image](https://github.com/PenguinBear-cyber/The-Attack-and-Defense-of-Computer/blob/main/Practice/LAB2/image/LuckyGuess_final.jpg)
 
