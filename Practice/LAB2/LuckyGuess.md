@@ -52,5 +52,10 @@
 
 最後，重新設置 **0x400b93** 位置，然後繼續執行到斷點，即可以看到我們尋找的 flag。
 
-![image]()
+![image](https://github.com/PenguinBear-cyber/The-Attack-and-Defense-of-Computer/blob/main/Practice/LAB2/image/LuckyGuess_final.jpg)
 
+
+
+easyctf{aaA_tOucH_0f_luccK_47ca4e}
+
+[END]
