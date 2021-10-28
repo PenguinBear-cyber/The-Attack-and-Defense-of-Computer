@@ -18,7 +18,7 @@
 
 接下來我們可以開始使用 ghidra 工具進行程式的觀察及分析，這裡發現在 symbol tree 底下的 main function 有玄機，如圖。
 
-![image]()
+![image](https://github.com/PenguinBear-cyber/The-Attack-and-Defense-of-Computer/blob/main/Practice/LAB2/image/LuckyGuess_main.jpg)
 
 我們看到在最右邊的反編譯畫面中，可以知道程式的運作情形，
 
