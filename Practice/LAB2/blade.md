@@ -35,6 +35,6 @@ strcmp() 是一個C語言的函式庫。
 
 看到上圖程式圖，我們可知輸入值為 **to_say_something** 就可以滿足所有要求，因此再次執行檔案並輸入正確關鍵字，如圖。
 
-![image]()
+![image](https://github.com/PenguinBear-cyber/The-Attack-and-Defense-of-Computer/blob/main/Practice/LAB2/image/blade_final.jpg)
 
 
