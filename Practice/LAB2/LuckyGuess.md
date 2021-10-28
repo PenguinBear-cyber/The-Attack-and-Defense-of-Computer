@@ -22,6 +22,6 @@
 
 我們看到在最右邊的反編譯畫面中，可以知道程式的運作情形，
 
-![image]()
+![image](https://github.com/PenguinBear-cyber/The-Attack-and-Defense-of-Computer/blob/main/Practice/LAB2/image/LuckyGuess_maincode.jpg)
 
-呈上圖，底色綠色的地方說明若 **if ( local_a8 == local_9c ) 則 **break** 表示會跳出 while 迴圈，進入 for 迴圈得到 flag，亦表示執行成功。
+呈上圖，底色綠色的地方說明若 **if ( local_a8 == local_9c ) 則 **break**，此表示若滿足 if 條件就會跳出 while 迴圈，進入 for 迴圈得到 flag，亦表示執行成功。
