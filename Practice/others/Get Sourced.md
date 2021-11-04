@@ -10,11 +10,11 @@
 
 ![image](https://github.com/PenguinBear-cyber/The-Attack-and-Defense-of-Computer/blob/main/Practice/others/image/get_sourced_index.jpg)
 
-網頁密密麻麻非常多行程式碼內容，找到眼睛都花了QQ，一定要拉到最下面，最後一行寫 **<!-- Now this is a comment! -->**，看起來離答案很接近了。
+網頁密密麻麻非常多行程式碼內容，找到眼睛都花了QQ，一定要拉到最下面，最後一行寫 **Now this is a comment!**，看起來離答案很接近了。
 
 ![image]()
 
-仔細一點看，答案就在網頁的最底，然後再往右拖一點，就會看到我們要找的 password 了!!
+再仔細一點看，答案就在網頁的最底，然後再往右拖一點，就會看到我們要找的 password 了!!
 
 ![image]()
 
