@@ -10,5 +10,5 @@
 
 現在有很多凱薩加解密的計算機，也可以自己一個一個字母推算，這裡用計算機去做計算，
 
-![image]()
+![image](https://github.com/PenguinBear-cyber/The-Attack-and-Defense-of-Computer/blob/main/Practice/others/image/ceasar_I_crypto.jpg)
 
