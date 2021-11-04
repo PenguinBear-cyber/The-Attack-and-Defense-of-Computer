@@ -16,5 +16,5 @@
 
 再仔細一點看，答案就在網頁的最底，然後再往右拖一點，就會看到我們要找的 password 了!!
 
-![image]()
+![image](https://github.com/PenguinBear-cyber/The-Attack-and-Defense-of-Computer/blob/main/Practice/others/image/get_sourced_final.jpg)
 
