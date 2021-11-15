@@ -24,7 +24,7 @@ output:0x7f46f939c9f0          ==> 表示有 format string 漏洞
 
 > b main
 
-![image]()
+![image](https://github.com/PenguinBear-cyber/The-Attack-and-Defense-of-Computer/blob/main/Practice/20211115/image/fmtstr_gdb.png)
 
 > r
 
