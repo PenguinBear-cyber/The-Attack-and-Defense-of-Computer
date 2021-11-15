@@ -75,3 +75,55 @@ Breakpoint 1, 0x00000000004006ca in main ()
 
 ```
 > ni   ==>一直到scanf
+```
+────────────────────────────────── Registers ───────────────────────────────────
+RAX: 0x0 
+RBX: 0x0 
+RCX: 0xfbad008b 
+RDX: 0x0 
+RSI: 0x7fffffffe110 --> 0xff0000000000 
+RDI: 0x400844 --> 0x3b031b0100007325 
+RBP: 0x7fffffffe180 --> 0x4007c0 (<__libc_csu_init>:	push   r15)
+RSP: 0x7fffffffe110 --> 0xff0000000000 
+RIP: 0x400786 (<main+192>:	call   0x4005b0 <__isoc99_scanf@plt>)
+R8 : 0x7ffff7fac8d0 --> 0x0 
+R9 : 0x7ffff7fb1540 (0x00007ffff7fb1540)
+R10: 0xfffffffffffff427 
+R11: 0x7ffff7e61200 (<__GI__IO_setvbuf>:	push   r13)
+R12: 0x4005d0 (<_start>:	xor    ebp,ebp)
+R13: 0x7fffffffe260 --> 0x1 
+R14: 0x0 
+R15: 0x0
+EFLAGS: 0x10206 (carry PARITY adjust zero sign trap INTERRUPT direction overflow)
+───────────────────────────────────── Code ─────────────────────────────────────
+   0x400779 <main+179>:	mov    rsi,rax
+   0x40077c <main+182>:	mov    edi,0x400844
+   0x400781 <main+187>:	mov    eax,0x0
+=> 0x400786 <main+192>:	call   0x4005b0 <__isoc99_scanf@plt>
+   0x40078b <main+197>:	lea    rax,[rbp-0x70]
+   0x40078f <main+201>:	mov    rdi,rax
+   0x400792 <main+204>:	mov    eax,0x0
+   0x400797 <main+209>:	call   0x400580 <printf@plt>
+Guessed arguments:
+arg[0]: 0x400844 --> 0x3b031b0100007325 
+arg[1]: 0x7fffffffe110 --> 0xff0000000000 
+──────────────────────────────────── Stack ─────────────────────────────────────
+0000| 0x7fffffffe110 --> 0xff0000000000 
+0008| 0x7fffffffe118 --> 0x0 
+0016| 0x7fffffffe120 --> 0x0 
+0024| 0x7fffffffe128 --> 0xff00000000 
+0032| 0x7fffffffe130 --> 0x0 
+0040| 0x7fffffffe138 --> 0x0 
+0048| 0x7fffffffe140 ("FLAG{", '?' <repeats 46 times>, "}")
+0056| 0x7fffffffe148 ('?' <repeats 43 times>, "}")
+────────────────────────────────────────────────────────────────────────────────
+Legend: code, data, rodata, heap, value
+0x0000000000400786 in main ()
+```
+```
+在 gdb 裡，為了方便除錯，它將程式碼以副程式為單位分成一個個的區塊 (frame)。比如說，main() 會被視為一個 frame，而其他 function 則會被視為另一個 frame。因而在利用 gdb 除錯時，可以直接執行某個 frame、跳至上一個或下一個 frame、直接執行至該 frame 結束... 等等，而加快在使用 gdb 來 debug 的速度並降低 debug 的困難度。
+
+在 frame 與 frame 之間，正在執行的區塊就是 frame 0。呼叫該區塊的就是 frame 1；而再上上一層的就叫 frame 2，以此類推。
+
+在 gdb 進入另一個 frame 之前，它會將該 frame 的一些變數值之類的儲存至堆疊 (stack) 裡，等到從 frame 回來後再從這些 stack 裡把這些變數值取回來。
+```
