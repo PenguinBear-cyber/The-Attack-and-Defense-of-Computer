@@ -2,7 +2,7 @@
 
 [題目]
 
-![image]()
+![image](https://github.com/PenguinBear-cyber/The-Attack-and-Defense-of-Computer/blob/main/Practice/20211115/image/fmtstr_topic.png)
 
 [解題]
 
