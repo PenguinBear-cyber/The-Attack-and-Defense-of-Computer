@@ -21,6 +21,7 @@ output:0x7f46f939c9f0          ==> 表示有 format string 漏洞
 ```
 下一步，開始進行逆向分析，使用 gdb。
 > gdb fmtstr
+
 > b main
 
 ![image]()
