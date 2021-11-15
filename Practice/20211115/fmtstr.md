@@ -74,3 +74,4 @@ Legend: code, data, rodata, heap, value
 Breakpoint 1, 0x00000000004006ca in main ()
 
 ```
+> ni   ==>一直到scanf
