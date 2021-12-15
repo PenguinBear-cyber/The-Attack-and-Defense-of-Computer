@@ -6,7 +6,7 @@
 
 [解題]
 
-首先可以透過程式看到其提供以下幾種功能:
+首先可以透過執行程式看到其提供以下幾種功能:
 * keep secret:有三種不同大小的空間，並依對應的大小輸入秘密到該空間。
 * wipe secret:可以自行選擇要free掉哪種大小的空間。
 * renew secret:重新創建某個大小的空間。
@@ -14,6 +14,8 @@
 接下來可以用 ghidra 進行分析，其中看到比較有東西的程式畫面如下:
 
 ![image](https://github.com/PenguinBear-cyber/The-Attack-and-Defense-of-Computer/blob/main/Practice/LAB3/image/secretholder_code.jpg)
+
+在 keep secret 的函數中使用 calloc() 為三種 secret 分配不同大小的 chunk (small chunk、big chunk、huge chunk)，在分配前會檢查相對應的 secret 是否已經存在，因為每種 chunk 只能有一個。而在 wipe secret 函數在釋放 secret 時，首先將對應的 chunk 釋放掉，然後設置 flag 為 0。最後，renew secret 函數會先判斷對應的 flag 是否為 1，表示 secret 是否已經存在，如果不存在則讀入 secret，否則函數直接返回。
 
 #### exploit.py
 ```
