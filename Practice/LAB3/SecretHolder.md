@@ -1,9 +1,12 @@
 # SecretHolder
 
 [執行程式]
+![image]()
+
+[解題]
 
 
-
+#### exploit.py
 ```
 from pwn import *
 from LibcSearcher import *
