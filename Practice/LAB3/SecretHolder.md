@@ -1,7 +1,7 @@
 # SecretHolder
 
 [執行程式]
-![image]()
+![image](https://github.com/PenguinBear-cyber/The-Attack-and-Defense-of-Computer/blob/main/Practice/LAB3/image/secretholder_topic.jpg)
 
 [解題]
 
