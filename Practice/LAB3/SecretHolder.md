@@ -23,7 +23,14 @@
 
 因此，本題可以利用 unsorted bin 的 unlink 來攻擊。
 
-我們先建一個 big chunk，然後在 free 這個 big chunk，接著再建一個 small chunk 和一個 medium chunk。
+我們先建一個 big chunk，然後在 free 這個 big chunk，接著再建一個 small chunk 和一個 medium chunk。三個 chunk 的狀態會呈現如下:
+
+![image](https://github.com/PenguinBear-cyber/The-Attack-and-Defense-of-Computer/blob/main/Practice/LAB3/image/secretholder_pic1.jpg)
+
+接下來把 small chunk 和 medium chunk 都 free 掉，因為在分配 huge chunk 的時候，glibc 會調用函數 malloc_consolidate() 來清除 fastbin 中的 chunk，所以 medium chunk 會被放到了 small chunk 的位置，當再次分配 small chunk 時會造成堆塊重疊。因此，我们要對 medium 做 double free，我們要在 Small 的位置偽造假 chunk，也要重新建好 medium 的結構，還有在 medium 後面再偽造幾個假 chunk，繞過檢查。則現在的狀態如下:
+
+![image]()
+
 
 #### exploit.py
 ```
