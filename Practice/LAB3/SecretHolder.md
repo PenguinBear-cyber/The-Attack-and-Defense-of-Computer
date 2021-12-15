@@ -1,4 +1,4 @@
-ge# SecretHolder
+# SecretHolder
 
 [執行程式]
 
@@ -6,6 +6,14 @@ ge# SecretHolder
 
 [解題]
 
+首先可以透過程式看到其提供以下幾種功能:
+* keep secret:有三種不同大小的空間，並依對應的大小輸入秘密到該空間。
+* wipe secret:可以自行選擇要free掉哪種大小的空間。
+* renew secret:重新創建某個大小的空間。
+
+接下來可以用 ghidra 進行分析，其中看到比較有東西的程式畫面如下:
+
+![image](https://github.com/PenguinBear-cyber/The-Attack-and-Defense-of-Computer/blob/main/Practice/LAB3/image/secretholder_code.jpg)
 
 #### exploit.py
 ```
