@@ -1,6 +1,6 @@
 # SecretHolder
 
-*[執行程式]*
+[執行程式]
 
 ![image](https://github.com/PenguinBear-cyber/The-Attack-and-Defense-of-Computer/blob/main/Practice/LAB3/image/secretholder_topic.jpg)
 
@@ -119,3 +119,9 @@ delete(2)
 
 sh.interactive()
 ```
+這樣就可以順利找出 flag 了。
+
+#### 參考資料
+* https://blog.csdn.net/seaaseesa/article/details/104216111
+* https://github.com/briansp8210/CTF-writeup/blob/master/HITCONCTF_2016_qual/SecretHolder/README.md
+* https://firmianay.gitbooks.io/ctf-all-in-one/content/doc/6.1.21_pwn_hitconctf2016_secret_holder.html
