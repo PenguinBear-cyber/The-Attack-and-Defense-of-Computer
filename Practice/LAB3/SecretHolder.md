@@ -17,6 +17,14 @@
 
 在 keep secret 的函數中使用 calloc() 為三種 secret 分配不同大小的 chunk (small chunk、big chunk、huge chunk)，在分配前會檢查相對應的 secret 是否已經存在，因為每種 chunk 只能有一個。而在 wipe secret 函數在釋放 secret 時，首先將對應的 chunk 釋放掉，然後設置 flag 為 0。最後，renew secret 函數會先判斷對應的 flag 是否為 1，表示 secret 是否已經存在，如果不存在則讀入 secret，否則函數直接返回。
 
+透過程式碼解析可以發現有以下漏洞:
+* double-free:在 free chunk 的位置 calloc 另一個 chunk，表示可以重複 free 這個 chunk。
+* use-after-free:因為 double-free 的的情況發生，所以 calloc 出來的那個 chunk 會被認為是 free 的，但它實際上卻可以使用。
+
+因此，本題可以利用 unsorted bin 的 unlink 來攻擊。
+
+我們先建一個 big chunk，然後在 free 這個 big chunk，接著再建一個 small chunk 和一個 medium chunk。
+
 #### exploit.py
 ```
 from pwn import *
