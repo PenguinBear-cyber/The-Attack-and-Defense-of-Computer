@@ -1,6 +1,6 @@
 # SecretHolder
 
-[執行程式]
+*[執行程式]*
 
 ![image](https://github.com/PenguinBear-cyber/The-Attack-and-Defense-of-Computer/blob/main/Practice/LAB3/image/secretholder_topic.jpg)
 
@@ -29,8 +29,11 @@
 
 接下來把 small chunk 和 medium chunk 都 free 掉，因為在分配 huge chunk 的時候，glibc 會調用函數 malloc_consolidate() 來清除 fastbin 中的 chunk，所以 medium chunk 會被放到了 small chunk 的位置，當再次分配 small chunk 時會造成堆塊重疊。因此，我们要對 medium 做 double free，我們要在 Small 的位置偽造假 chunk，也要重新建好 medium 的結構，還有在 medium 後面再偽造幾個假 chunk，繞過檢查。則現在的狀態如下:
 
-![image]()
+![image](https://github.com/PenguinBear-cyber/The-Attack-and-Defense-of-Computer/blob/main/Practice/LAB3/image/secretholder_pic2.jpg)
 
+再次 free 那個 medium，medium 就會與 Fake_chunk1 發生 unlink，這樣就能自由控制堆塊，把 free 的 got 表修改成 puts 的 plt 地址，當 free 時就能洩漏出訊息。
+
+根據以上的敘述，exploit code 呈現如下:
 
 #### exploit.py
 ```
