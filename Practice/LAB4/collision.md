@@ -2,21 +2,21 @@
 
 [題目]
 
-![image]()
+![image](https://github.com/PenguinBear-cyber/The-Attack-and-Defense-of-Computer/blob/main/Practice/LAB4/image/collision_topic.jpg)
 
 [解題]
 
 根據題目的提示，進行 ssh 的連線並輸入密碼進入題目環境，如圖。
 
-![image]()
+![image](https://github.com/PenguinBear-cyber/The-Attack-and-Defense-of-Computer/blob/main/Practice/LAB4/image/collision_run.jpg)
 
 接著，輸入 **ls -al** 指令來查看裡面有甚麼文件以及屬性，如圖。
 
-![image]()
+![image](https://github.com/PenguinBear-cyber/The-Attack-and-Defense-of-Computer/blob/main/Practice/LAB4/image/collision_ls.jpg)
 
 根據上圖發現 **col.c 檔案是可讀的、col 檔案是可執行的**，其他檔案目前都沒辦法操作。因此，就先查看 col.c 程式裡面的內容吧，內容如下。
 
-![image]()
+![image](https://github.com/PenguinBear-cyber/The-Attack-and-Defense-of-Computer/blob/main/Practice/LAB4/image/collision_cat.jpg)
 
 看到裡面的 main function 可以發現只要 system("/bin/cat flag"); 這句一執行，就可以得到我們想要的 flag 了。因此，想要執行這一語句，就需要前面兩個 if 語句不能執行，並且第三個 if 語句要保證執行。
 
@@ -29,7 +29,7 @@
 
 所以寫一個小 python 腳本將值給求出來，並輸入即可。
 
-![image]()
+![image](https://github.com/PenguinBear-cyber/The-Attack-and-Defense-of-Computer/blob/main/Practice/LAB4/image/collision_final.jpg)
 
 daddy! I just managed to create a hash collision :)
 
