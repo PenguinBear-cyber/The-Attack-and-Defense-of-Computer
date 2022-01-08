@@ -26,4 +26,32 @@
 
 接下來，可以用 gdb 來除錯一下。開啟 gdb 後，來檢視一下被呼叫函式 func() 的反彙編程式碼。
 
-![image]()
+![image](https://github.com/PenguinBear-cyber/The-Attack-and-Defense-of-Computer/blob/main/Practice/LAB4/image/bof_disassemble.jpg)
+
+這裡可以發現這樣一段反彙編程式碼 **0x56555654 <+40>: cmp DWORD PTR [ebp+0x8],0xcafebabe**，可以知道我們要的比較語句地址在 **0x56555654**，於是先在這位置打一個斷點(b *0x56555654)。然後執行(run)程式。
+
+![image](https://github.com/PenguinBear-cyber/The-Attack-and-Defense-of-Computer/blob/main/Practice/LAB4/image/bof_br.jpg)
+
+這裡我們用輸入垃圾值來試探出偏移量。我們知道 A 將在記憶體中顯示為 \ x41，而且緩衝區長度為 32。因此不如就輸入 33 個 A 來讓其溢位，然後通過檢查記憶體，來檢視偏移量。輸入完成後會呈現下圖:
+
+![image](https://github.com/PenguinBear-cyber/The-Attack-and-Defense-of-Computer/blob/main/Practice/LAB4/image/bof_b.jpg)
+
+程式會停在我們設定的斷點處，此時接著輸入 **x /40xw $esp** (x:以十六進位制顯示 w:以 4 位元組為一個單位顯示)來檢視從斷點處起的 40 位元組的記憶體值，由於 esp 是我們的程式流指標，其裡面儲存了程式在 func 中執行時記憶體的變化。
+
+![image](https://github.com/PenguinBear-cyber/The-Attack-and-Defense-of-Computer/blob/main/Practice/LAB4/image/bof_x.jpg)
+
+從圖發現從第一個出現 0x41 的地方到 0xdeadbeef 的距離是 13 個單位，而一個單位是 4 位元組，也就是說偏移量為 52 個位元組。
+
+所以，只要建造出 52 個位元組然後加上 0xcafebabe，用它們來覆蓋 0xdeadbeef 即可。
+
+* exploit.py
+![image](https://github.com/PenguinBear-cyber/The-Attack-and-Defense-of-Computer/blob/main/Practice/LAB4/image/bof_exploit.jpg)
+
+最後，執行 exploit.py 即可找到答案。
+
+![image](https://github.com/PenguinBear-cyber/The-Attack-and-Defense-of-Computer/blob/main/Practice/LAB4/image/bof_final.jpg)
+
+daddy, I just pwned a buFFer :)
+
+[參考資料]
+* https://www.itread01.com/content/1545128766.html
