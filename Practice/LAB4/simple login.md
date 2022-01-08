@@ -6,7 +6,7 @@
 
 [執行程式]
 
-![image]()
+![image](https://github.com/PenguinBear-cyber/The-Attack-and-Defense-of-Computer/blob/main/Practice/LAB4/image/simple%20login_excute.jpg)
 
 [解題]
 
