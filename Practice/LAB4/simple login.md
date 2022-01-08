@@ -135,3 +135,29 @@ eax 為 Base64Decode 解碼後返回的長度，因此**若輸入長度大於 12
  } // if
  else return 0;
 ```
+
+
+* 撰寫 exploit code
+
+觀察分析完以上程式碼後，可以進入攻擊漏洞的環節。要達成三個條件:
+1.覆蓋的 ebp 要距離 correct() 函數的起始位址 4 BYTES。
+2.執行 correct() 函數時 input 的值要是 0xdeadbeef。
+3.只有 12 個 bytes 可以利用。(大於12則不會進行到後面的漏洞)
+
+開始撰寫 exploit code。
+
+首先，找到 input 值。
+
+![image](https://github.com/PenguinBear-cyber/The-Attack-and-Defense-of-Computer/blob/main/Practice/LAB4/image/simple%20login_input.jpg)
+
+找到繞過correct()驗證後的位址。
+
+![image](https://github.com/PenguinBear-cyber/The-Attack-and-Defense-of-Computer/blob/main/Practice/LAB4/image/simple%20login_correct.jpg)
+
+exploit.py
+
+![image](https://github.com/PenguinBear-cyber/The-Attack-and-Defense-of-Computer/blob/main/Practice/LAB4/image/simple%20login_exploit.jpg)
+
+執行後的畫面
+
+![image](https://github.com/PenguinBear-cyber/The-Attack-and-Defense-of-Computer/blob/main/Practice/LAB4/image/simple%20login_final.jpg)
