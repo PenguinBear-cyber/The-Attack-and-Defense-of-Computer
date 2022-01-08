@@ -12,6 +12,7 @@
 
 透過執行此程式後，可以看到題目要我們輸入 Authenticate，當隨意輸入完成後，會顯示一串 hash value 即結束程式。
 
+* main()函數分析
 首先，使用 ghidra 來進行靜態分析，觀察 main 的程式碼及架構並將其對照，如圖。
 
 ![image](https://github.com/PenguinBear-cyber/The-Attack-and-Defense-of-Computer/blob/main/Practice/LAB4/image/simple%20login_maincode.jpg)
@@ -102,4 +103,4 @@ input 就是程式要我們輸入的地方!!
 
 eax 為 Base64Decode 解碼後返回的長度，因此**若輸入長度大於 12(0xd)** 的話則跳轉到 Wrong Length，否則會進到 auth() function 中。
 
-
+* auth()函數分析
