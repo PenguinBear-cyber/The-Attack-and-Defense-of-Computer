@@ -31,7 +31,7 @@
 
 ![image](https://github.com/PenguinBear-cyber/The-Attack-and-Defense-of-Computer/blob/main/Practice/LAB4/image/collision_final.jpg)
 
-daddy! I just managed to create a hash collision :)
+daddy! I just managed to create a hash collision : )
 
 [參考資料]
 * https://blog.csdn.net/Y_peak/article/details/112785138
