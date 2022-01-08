@@ -107,3 +107,31 @@ eax 為 Base64Decode 解碼後返回的長度，因此**若輸入長度大於 12
 
 * auth()函數分析
 
+![image](https://github.com/PenguinBear-cyber/The-Attack-and-Defense-of-Computer/blob/main/Practice/LAB4/image/simple%20login_authcode.jpg)
+
+![image](https://github.com/PenguinBear-cyber/The-Attack-and-Defense-of-Computer/blob/main/Practice/LAB4/image/simple%20login_auth.jpg)
+
+根據上圖開始進行 auth() 分析。
+
+```
+        080492a2 8b 45 08        MOV        EAX,dword ptr [EBP + param_1]
+        080492a5 89 44 24 08     MOV        dword ptr [ESP + local_24],EAX
+        080492a9 c7 44 24        MOV        dword ptr [ESP + local_28],input                 = 
+                 04 40 eb 
+                 11 08
+        080492b1 8d 45 ec        LEA        EAX=>local_18,[EBP + -0x14]
+        080492b4 83 c0 0c        ADD        EAX,0xc
+        080492b7 89 04 24        MOV        dword ptr [ESP]=>local_2c,EAX
+        080492ba e8 a1 03        CALL       memcpy                                           void * memcpy(void * __dest, voi
+```
+這裡得到 **memcpy( &local1, &input, var3 ); # var3就是main傳過來的參數**
+
+因此，var3 也就是代表 input，其長度最大不可以超過 12 byte。
+
+綜合上面分析來看，程式碼可以看作為:
+```
+ if( strcmp( "f87cd601aa7fedca99018a8be88eda34", local3 ) == 0 ){
+   return 1;
+ } // if
+ else return 0;
+```
