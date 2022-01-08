@@ -161,3 +161,8 @@ exploit.py
 執行後的畫面
 
 ![image](https://github.com/PenguinBear-cyber/The-Attack-and-Defense-of-Computer/blob/main/Practice/LAB4/image/simple%20login_final.jpg)
+
+
+[參考資料]
+* https://ithelp.ithome.com.tw/articles/10221566
+* https://ithelp.ithome.com.tw/articles/10221639
