@@ -5,6 +5,7 @@
 ![image](https://github.com/PenguinBear-cyber/The-Attack-and-Defense-of-Computer/blob/main/Practice/LAB4/image/wtf_topic.jpg)
 
 [解題]
+
 首先，查看題目提供的 wtf.py 程式檔案，如下:
 ```
 #!/usr/bin/python2
