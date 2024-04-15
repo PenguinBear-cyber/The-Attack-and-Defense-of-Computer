@@ -1,9 +1,9 @@
 # The-Attack-and-Defense-of-Computer
 
-This is an exercise for class 'The Attack and Defense of Computer'.
+This is an exercise for 'The Attack and Defense of Computer'.
 
 
-## Week2(20210924)
+## Week2
 
 01 Linux C程式的編譯與運行
 
@@ -14,5 +14,5 @@ This is an exercise for class 'The Attack and Defense of Computer'.
 04 Reversing using objdump
 
 
-## Week3(20211001)
+## Week3
 nasm
